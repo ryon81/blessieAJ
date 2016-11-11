@@ -11,10 +11,10 @@ public class ActionPoint extends Monsters implements Apable
 		{*/	
 		while(true)
 		{			
-			System.out.print("AP´Â? ");
+			System.out.print("APëŠ”? ");
 			Scanner s = new Scanner(System.in);
 			int tmp = s.nextInt();
-			System.out.println("ÀüÃ¼ Çàµ¿·ÂÀÌ " + tmp + "Áõ°¡ µÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì „ì²´ í–‰ë™ë ¥ì´ " + tmp + "ì¦ê°€ ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			super.actionPoint += tmp;						
 			apFill(super.actionPoint);
 			s.close();
@@ -22,14 +22,14 @@ public class ActionPoint extends Monsters implements Apable
 									
 		/*} catch (Exception ex)
 		{
-			System.out.print("ÇÁ·Î±×·¥ ºñÁ¤»ó Á¾·á");
+			System.out.print("í”„ë¡œê·¸ë¨ ë¹„ì •ìƒ ì¢…ë£Œ");
 			System.exit(-1);
 		}*/		
 	}		
 	
 	public void apFill(int actionPoint)
 	{					
-		System.out.println("ÀüÃ¼ Çàµ¿·Â: " + actionPoint);
+		System.out.println("ì „ì²´ í–‰ë™ë ¥: " + actionPoint);
 		new Attacker().checkAttacker(actionPoint);
 		new Defender().checkAttacker(actionPoint);
 		new Supporter().checkAttacker(actionPoint);
@@ -38,11 +38,3 @@ public class ActionPoint extends Monsters implements Apable
 	
 	
 	
-	void checkBossAp(){};
-	
-	void checkDefenderAp(){};
-		
-	void checkPhysicalAp(){};
-	
-	void checkSupporterAp(){};
-}
