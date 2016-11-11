@@ -35,6 +35,10 @@ public class ActionPoint extends Monsters implements Apable
 		new Supporter().checkAttacker(actionPoint);
 		new Physical().checkAttacker(actionPoint);
 	} 
+
+	// --------------- 추가 코딩은 여기 부터 -------------//
+
+}
 	
 	
 	
