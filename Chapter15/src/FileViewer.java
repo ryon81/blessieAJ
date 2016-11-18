@@ -17,6 +17,8 @@ class FileViewer
 			System.out.print(c);
 		}
 
+		fis.close();
+		sc.close();
 	}
 
 }
