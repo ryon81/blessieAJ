@@ -2,7 +2,7 @@ import java.io.*;
 import java.text.*;
 import java.util.*;
 
-public class FileEx04 
+class FileEx04 
 {
 	public static void main(String[] args) 
 	{
