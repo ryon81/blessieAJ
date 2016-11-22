@@ -2,15 +2,15 @@ package jdbc.sql;
 
 import java.sql.*;
 
-public class JdbcProg 
+public class JdbcProg05 
 {
 	public static void main(String[] args) 
 	{
 		String jdbc_url = "jdbc:oracle:thin:@127.0.0.1:1521:orcl";
 		Connection con;
 		Statement stmt;
-		int empNo, mgr, sal, comm, deptno;
-		String ename, job, hireDate ;
+		int empNo, grade;
+		String ename, dname ;
 		
 		try
 		{
@@ -24,22 +24,22 @@ public class JdbcProg
 		{
 			con = DriverManager.getConnection(jdbc_url, "scott", "tiger");
 			stmt = con.createStatement();
-			String sql = "SELECT * FROM emp01";
-			ResultSet rs = stmt.executeQuery(sql);
-			System.out.println("empno" + " " + "ename"+ "  " + "job" + " " + "mgr" + " " + "hiredate" + " " + "sal" + " " + "comm" + " " + "deptno" );
-			System.out.println("=================================================================");
+			
+															
+			String sql = "SELECT e.empno, e.ename, d.dname, s.grade from emp e, dept d, salgrade s where e.deptno = d.deptno and e.sal between s.losal and s.hisal";
+			ResultSet rs = stmt.executeQuery(sql);		
+						
+			System.out.println("empno" + " " + "ename"+ "  " + "dname" + " " + "grade");
+			System.out.println("==================================================");
 			
 			while (rs.next())
 			{
 				empNo = rs.getInt("empno");
 				ename = rs.getString("ename");
-				job = rs.getString("job");
-				mgr = rs.getInt("mgr");
-				hireDate = rs.getString("hiredate");
-				sal = rs.getInt("sal");
-				comm = rs.getInt("comm");
-				deptno = rs.getInt("deptno");
-				System.out.println(empNo + "  " + ename + "  " + job + " " + mgr + " " + hireDate + " " + sal + " " + comm + "  " + deptno);
+				dname = rs.getString("dname");
+				grade = rs.getInt("grade");
+				
+				System.out.println(empNo + "  " + ename + "  " + dname + " " + grade);
 			}
 
 			rs.close();

@@ -2,7 +2,7 @@ package jdbc.sql;
 
 import java.sql.*;
 
-public class JdbcProg 
+public class JdbcProg04 
 {
 	public static void main(String[] args) 
 	{
@@ -24,8 +24,13 @@ public class JdbcProg
 		{
 			con = DriverManager.getConnection(jdbc_url, "scott", "tiger");
 			stmt = con.createStatement();
+			
+			String sql2 = "DELETE from emp01 where empno=2222";
+			int delete = stmt.executeUpdate(sql2);
+														
 			String sql = "SELECT * FROM emp01";
-			ResultSet rs = stmt.executeQuery(sql);
+			ResultSet rs = stmt.executeQuery(sql);		
+						
 			System.out.println("empno" + " " + "ename"+ "  " + "job" + " " + "mgr" + " " + "hiredate" + " " + "sal" + " " + "comm" + " " + "deptno" );
 			System.out.println("=================================================================");
 			
