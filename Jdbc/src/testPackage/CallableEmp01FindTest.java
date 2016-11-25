@@ -14,8 +14,10 @@ public class CallableEmp01FindTest
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521:orcl","scott","tiger");
 			
-			cs = con.prepareCall("{call findTable}");
-			System.out.println();
+			cs = con.prepareCall("{call findTable");
+			cs.execute();
+			
+			System.out.println(cs);
 		
 		} catch(Exception e)
 		{
