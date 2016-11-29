@@ -18,7 +18,7 @@ class GraphicsEx1 extends Frame
 		// --- 글꼴 스타일 ---
 		
 		// --- 기본 원 그리기 ---
-		g.drawOval(50,100,10,10);  // (도형의 좌상단 x좌표, 도형의 좌상단 Y좌표, width, height)
+		g.drawOval(8,30,10,10);  // (도형의 좌상단 x좌표, 도형의 좌상단 Y좌표, width, height)
 		// --- 기본 원 그리기 ---
 		
 		// --- 기본도형 스타일 ---		
