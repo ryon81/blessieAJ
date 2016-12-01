@@ -81,7 +81,7 @@ public class HelloDukeMain extends JFrame implements Runnable
 		}
 	}
 	
-	// 캔버스에서 이미지 표시되는 위치 지정하기
+	// buffer에서 이미지 표시되는 위치 지정하기
 	public void bufferPaint(int n)
 	{
 		buffer = createImage(can.getWidth(), can.getHeight());

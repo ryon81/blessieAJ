@@ -17,12 +17,12 @@ import java.util.Random;
 
 public class Yut2Test  extends Frame 
 {
-	String[] tYut = {"¡Û¡Û¡Û¡Û", "¡Ü¡Ü¡Ü¡Ü"};
+	//String[] tYut = {"¡Û¡Û¡Û¡Û", "¡Ü¡Ü¡Ü¡Ü"};
 	String[] Yut = { "À·", "°É", "°³", "µµ", "¸ð" };
 	Button b;
 	Label la, la1, la2, la3, la4, la5;
 	Font f;
-	Image[] imgYut;
+	Image[] imgYut; 
 	
 		
 	public Yut2Test()
