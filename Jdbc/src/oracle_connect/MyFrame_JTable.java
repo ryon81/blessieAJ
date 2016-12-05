@@ -23,7 +23,7 @@ public class MyFrame_JTable extends JFrame
 {
 	String sql;	
 	JTextArea textArea, textArea2;
-	JPanel panel, pane2;
+	JPanel pane1, pane2;
 	JLabel label, label2;
 	JButton btnNewButton;
 	String jdbc_url = "jdbc:oracle:thin:@127.0.0.1:1521:orcl";
@@ -32,13 +32,17 @@ public class MyFrame_JTable extends JFrame
 	ResultSet rs;
 	String[] col;
 	JTable table;
-	Object[][] cell_value = {};	
+	JScrollPane scrollPane;
+	
+	Object[][] cell_value;	
 	String ColName[] = {"사번", "이름", "직책", "매니저", "입사일", "급여", "상여금", "부서번호"};
 		
 	ResultSetMetaData rsmd;
 	
 	public MyFrame_JTable()
 	{
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		try
 		{
 			Class.forName("oracle.jdbc.driver.OracleDriver");			
@@ -58,15 +62,15 @@ public class MyFrame_JTable extends JFrame
 		
 		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 		
-		panel = new JPanel();
-		getContentPane().add(panel);
-		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+		pane1 = new JPanel();
+		getContentPane().add(pane1);
+		pane1.setLayout(new BoxLayout(pane1, BoxLayout.X_AXIS));
 		
 		label = new JLabel("SQL : ");
-		panel.add(label);	
+		pane1.add(label);	
 		
 		textArea = new JTextArea();
-		panel.add(textArea);		
+		pane1.add(textArea);		
 		
 		btnNewButton = new JButton("실   행");
 		btnNewButton.addActionListener(new ButtonSelectEvent());
@@ -76,13 +80,14 @@ public class MyFrame_JTable extends JFrame
 		pane2 = new JPanel();
 		getContentPane().add(pane2);
 		pane2.setLayout(new BoxLayout(pane2, BoxLayout.X_AXIS));
-		
-		label2 = new JLabel("result: ");
-		pane2.add(label2);
 				
 		table = new JTable(cell_value, ColName);
 		pane2.add(table);
-		add(new JScrollPane(table), BorderLayout.CENTER);
+		scrollPane = new JScrollPane(table);
+		getContentPane().add(scrollPane, BorderLayout.CENTER);
+		
+		label2 = new JLabel("result: ");
+		scrollPane.setRowHeaderView(label2);
 		
 		this.setSize(800,600);
 		this.setVisible(true);
@@ -92,6 +97,7 @@ public class MyFrame_JTable extends JFrame
 	{
 		public void actionPerformed(ActionEvent e)
 		{			
+			table.setValueAt(rsmd, table.getRowCount(), table.getColumnCount());;
 			sql=textArea.getText();
 			System.out.println(sql);
 			
@@ -106,7 +112,7 @@ public class MyFrame_JTable extends JFrame
 					col[i-1] = rsmd.getColumnLabel(i);
 					table.setValueAt(col[i-1] + "\t", i, 0); 
 				}
-				
+							
 				//textArea2.append("\n");
 				while(rs.next())
 				{
@@ -119,11 +125,12 @@ public class MyFrame_JTable extends JFrame
 						{
 							table.setValueAt(rs.getInt(i)+"\t", i, 0);
 						}
-					}					
+					}				
+					
 				}				
 			} catch (SQLException ex) 
 			{
-				textArea2.append("\r\n " + "조회 명령에 오류가 있어 작업이 실패했습니다.");
+				//textArea2.append("\r\n " + "조회 명령에 오류가 있어 작업이 실패했습니다.");
 			} finally
 			{
 				sql = "";

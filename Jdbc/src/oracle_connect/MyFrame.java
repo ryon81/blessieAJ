@@ -33,6 +33,8 @@ public class MyFrame extends JFrame
 	
 	public MyFrame()
 	{
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		try
 		{
 			Class.forName("oracle.jdbc.driver.OracleDriver");			
