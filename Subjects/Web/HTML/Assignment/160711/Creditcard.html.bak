@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Credit Card</title>
+	</head>
+
+	<body>
+		
+		<form name="input" action="http://www.naver.com" method="get"> 
+		
+			<fieldset> 
+				<legend>카드 정보 입력</legend>
+				
+					<ol>
+						<li> 
+							<fieldset> 
+								<legend>카드타입</legend>
+									<label for="1">1.</label>
+										<input type="radio" name="cardtype" id=1 value="VISA"> VISA <br> 
+									<label for="2">2.</label>
+										<input type="radio" name="cardtype" id=2 value="AMEX"> AMEX <br>
+									<label for="3">3.</label>
+										<input type="radio" name="cardtype" id=3 value="MAST"> Master Card 
+							</fieldset> 
+						</li>
+						<li>
+						카드번호
+							<select name="Card Number">
+								<option value="none" selected> </option>
+								<option value="1">1234 5678 9012 3456</option>
+								<option value="2">2345 6789 0123 4567</option>
+								<option value="3">3456 7890 1234 5678</option>
+							</select>
+						</li>
+						<li>
+						CRC번호
+							<select name="CRC">
+								<option value="CRCnone" selected> </option>
+								<option value="CRC1">4567 8901 2345 6789</option>
+								<option value="CRC2">5678 9012 3456 7890</option>
+								<option value="CRC3">6789 0123 4567 8901</option>
+							</select>
+						</li>
+						<li>
+						카드 소유자 이름
+							<input type="text" name="name" value="카드상의 이름">
+						</li>
+					</ol>
+			
+
+			</fieldset> 
+
+			<fieldset> 
+				<input type="submit" value="구매">
+			</fieldset>
+		</form>		
+				
+				
+
+	</body>
+</html>

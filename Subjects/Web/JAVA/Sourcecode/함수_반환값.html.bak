@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script> 
+			function add(a, b) {
+				c=a+b;
+				return c;
+			}
+		
+			add(40,13);
+		</script>
+	</head>
+	<body>
+		 
+	</body>
+</html>

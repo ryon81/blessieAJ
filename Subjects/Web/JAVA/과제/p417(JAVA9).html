@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>자바 스크립트 폼 검증</title>
+			<style>
+				td#alert {visibility: hidden; }
+			</style>
+					
+
+			<script>
+		
+				//------------------필드 숫자만 입력 체크------------------
+					function checkNumeric(elem) {					
+						var exp = /^\d{3}-\d{4}/;
+						
+						if (elem.value.match(exp)) {
+							document.getElementById('alert').style.visibility = "hidden";
+							return true;
+						} else {
+							document.getElementById('phone').value = "aaa-bbbb";
+							document.getElementById('alert').style.visibility = "visible";
+							elem.focus();
+							return false;
+						}
+					}
+				//------------------필드 숫자만 입력 체크------------------
+				
+				//------------------Email 확인------------------
+					function ckmail(elem, msg) {					
+						var exp = /^([a-zA-Z0-9\.\-])+\@[a-zA-Z0-9\.\-]+\.[a-zA-Z0-9]{2,}$/;
+																								
+						if (elem.value.match(exp)) {
+							return true;
+						} else {
+							alert(msg);
+							elem.focus();
+							return false;
+						}
+					}
+				//------------------Email 확인------------------
+
+				
+				//------------------비밀번호 자릿수 확인------------------
+					function checkLength(elem, min, max) {					
+						var l = elem.value;
+																								
+						if (l.length >= 6 && l.length <= 8) {
+							return true;
+						} else {
+							alert(" 6과 8자 사이로 입력해 주세요!");
+							pw1.focus();
+							return false;
+						}
+					}
+				//------------------비밀번호 자릿수 확인------------------
+
+
+				//------------------비밀번호 중복확인------------------
+					function duplicatePw(elem) {					
+						var password1 = document.getElementById('pw2').value;
+						var password2 = document.getElementById('pw1').value;
+						
+						if (password1 == password2) {
+							return true;
+						} else {
+							alert("비밀번호가 다릅니다");
+							pw1.focus();
+							return false;
+						}
+					}
+				//------------------비밀번호 중복확인------------------
+
+			</script>
+
+	</head>
+	<body>
+		<h1> 회원신청서 </h1>
+			<form name="regFrm" method="post">
+				<table > 
+					<tr>
+						<td> 이름* </td>
+						<td> <input type='text' id='name' required value="HongGilDong"></td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td>성별*  <br> </td>
+						<td> 
+							<input type="radio" name="Gender" id="male" value="male"> <label for="male">남성</label>
+							<input type="radio" name="Gender" id="female" value="female"> <label for="female">여성</label>
+						</td>
+						<td> </td>	
+					</tr>														
+					<tr id="target">
+						<td>휴대폰 번호 Phone*</td>
+						<td> <input type='tel' id='phone' onblur="checkNumeric(document.getElementById('phone'),6,8)" required>  </td>
+						<td id="alert" class="alert" > 올바른 전화번호를 입력하시오 </td>	
+					</tr>
+					<tr>
+						<td>이메일*  </td>
+						<td> <input type='email' id='email' required onblur="ckmail(document.getElementById('email'),'올바른 e-mail형식이 아닙니다.')"></td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td>패스워드 (6~8 문자)*  </td>
+						<td><input type='password' id='pw1' required onblur="checkLength(document.getElementById('pw1'))"> </td>
+						<td> </td>	
+					</tr>
+					<tr>
+						<td>패스워드 검증* </td>
+						<td><input type='password' id='pw2' required onblur="duplicatePw(document.getElementById('pw2'))"> </td>
+						<td> </td>	
+					</tr>																			
+					<tr>
+						<td> </td>
+						<td> <input type='submit' value='제출' alt="제출 버튼">
+						<input type="reset" value="지우기"> </td>
+						<td> </td>	
+					</tr>																			
+			 
+				</table>
+			</form>
+	</body>
+</html>

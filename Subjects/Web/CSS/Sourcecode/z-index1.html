@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Z-index 속성</title>
+			<style> 
+				#box1 {
+					position: absolute;
+					top: 0px; left: 0px;
+					width: 100px; height: 100px;
+					background: blue;
+					z-index:200;
+				}
+				#box2 {
+					position: absolute;
+					top: 30px; left: 30px;
+					width: 100px; height: 100px;
+					background: yellow; 
+					z-index:400;
+				}
+				#box3 {
+					position: absolute;
+					top: 60px; left: 60px;
+					width: 100px; height: 100px;
+					background: green; 
+					z-index:0;
+				}
+				
+				img {
+					position: absolute;
+					left: 0px
+					top: 0px;
+					z-index: -1;
+
+				}
+			</style>	
+	</head>
+	<body>
+		<div id="box1"> box #1 </div>
+		<div id="box2"> box #2 </div>
+		<div id="box3"> box #3 </div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		
+		<img src="images/lion.jpg" width="200" height="200">
+		<p> img 요소의 z-index가 -1이므로 다른 요소의 뒤에 위치한다. </p>
+	</body>
+</html>

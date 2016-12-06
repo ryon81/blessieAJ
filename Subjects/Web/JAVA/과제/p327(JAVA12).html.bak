@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script> 
+			var i;
+			var planet = new Array();		
+			planet[0]="수성";
+			planet[1]="금성";
+			planet[2]="지구";
+			planet[3]="화성";
+			planet[4]="목성";
+			planet[5]="토성";
+			planet[6]="천왕성";
+			planet[7]="해왕성";
+			
+			for (i=0;i <planet.length ;i++ ) {
+				alert(fruits[i]);
+			}
+
+		</script>
+	</head>
+	<body>
+  
+	</body>
+</html>

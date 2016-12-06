@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  
+		<title>localhost</title>
+
+		<style> 
+		 
+			@keyframes movingbox {
+				from, to {
+					top: 5%; 
+					left: 5%;
+					animation-timing-function: ease-out;
+				}
+				25% {
+					top: 5%; 
+					left: 80%;
+					animation-timing-function: ease-out;
+				}
+				50% {
+					top: 75%; 
+					left: 80%; 
+					animation-timing-function: ease-out;
+				}
+				75% {
+					top: 75%; 
+					left: 5%; 
+					animation-timing-function: ease-out;
+				}
+				
+			}
+			#box {
+				position: absolute; 
+				width: 100px; 
+				height: 100px;
+				background:red;
+				animation-name: movingbox; 
+				animation-iteration-count: infinite; 
+				animation-duration: 10s; 
+				cursor: pointer;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div id="box"> </div>
+		
+	</body>
+</html>

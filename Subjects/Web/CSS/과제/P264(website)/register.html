@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>회원가입</title>
+		<link type="text/css" rel="stylesheet" href="mystyle.css">
+	</head>
+
+	<body>
+			
+	<div class="register">
+		
+					<form action="adduser.jsp" method="post">
+					<fieldset>
+						<legend> 회원정보 입력 </legend>
+						<Table class="regi">
+							<tr>
+								<td>
+									<label for="ID" >아이디</lable> <br>
+								</td>
+								<td>
+									<input type="text" name="id" id="ID"> <br>
+								</td>
+								<td>
+									<input type="button" value="중복검사" action="중복 검사가 완료되었습니다.">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="PW1" >패스워드</lable> <br>							 
+								</td>
+								<td>
+									<input type="text" name="password" id="PW1"> <br>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="PW2" >패스워드 확인</lable> <br>	
+								</td>
+								<td>
+									<input type="text" name="pwcheck" id="PW2">	<br>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="name" >이름</lable> <br>
+								</td>
+								<td>
+									<input type="text" name="name" id="name"> <br>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="hp" >휴대폰 번호</lable> <br>
+								</td>
+								<td>
+									<input type="text" name="cellphone" id="hp"> <br>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="email" >이메일</lable> <br>
+								</td>
+								<td>
+									<input type="text" name="enail" id="email"> <br>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="dob" >생일</lable> <br>
+								</td>
+								<td>
+									<input type="text" name="dob" id="dob"> <br>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="website" >홈페이지</lable> <br>
+								</td>
+								<td>
+									<input type="text" name="website" id="website">	<br>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td class="alone">
+									<input type="radio" name="Gender" id="male" value="male"> <br> 
+								</td>
+								<td class="alone">
+									<label for="male">남성</label> <br>
+								</td>
+								<td>
+								</td>
+							</tr>
+							<tr>
+								<td class="alone">
+									<input type="radio" name="Gender" id="female" value="female"> <br>
+								</td>
+								<td class="alone">
+									<label for="female">여성</label> <br>
+								</td>
+								<td>
+								</td>
+							</tr>
+						</table>
+					</fieldset>	
+				<input type="submit" value="제출">
+				<input type="reset" value="초기화"> <br>
+			</form>				
+		</div>
+	</body>
+</html>

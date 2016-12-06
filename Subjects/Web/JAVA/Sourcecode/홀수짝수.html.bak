@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script> 
+			var input;
+			input = prompt("정수를 입력하시오", "정수로");
+			
+			a = parseInt(input);
+
+			var a, b;
+			var msg="";
+
+			b = a % 2
+			
+			if (b == 0) {
+				msg= "짝수이다";
+			}
+			else if (b == 1) {
+				msg= "홀수이다";
+			}
+			else {
+				msg= "잘못된 값입니다.";
+			}
+			alert(msg);
+			
+
+		</script>
+	</head>
+	<body>
+  
+	</body>
+</html>

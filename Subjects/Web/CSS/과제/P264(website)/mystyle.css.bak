@@ -1,0 +1,138 @@
+* {
+	padding: 0px; margin: 0px;
+}
+
+body {
+	background-color: #FAF4C0;
+}
+
+
+header {
+	color: #000000;
+	margin: 4pt;
+	text-align: left;
+	font-size: 20pt;
+	padding: 2pt;
+}
+
+nav {
+	color: #000000;
+	margin: 10pt;
+}
+
+.menubar li {
+	display: inline;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: red; 
+	letter-spacing: 10px;
+	padding: 10px;
+	text-transform:uppercase;					
+	text-align:center;
+
+}	
+.menubar li a {
+	text-decoration:none;
+	color:black;
+}
+
+.menubar li a:hover {text-decoration:none;
+}
+
+aside.left ul li {
+	border: 1px solid #662500;
+	background-color:#993800;
+}
+aside.left ul li a {
+	text-decoration:none;
+	display: block;
+	color:#FAF4C0;		
+}
+aside.left ul li a:hover {
+	background-color:#FF0000;	
+	}
+aside.left ul li a:active {
+	background-color:#FF0000;	
+	}
+
+aside.left {
+	float: left;
+	margin-top:20px;
+	
+}
+
+section.center {
+	float: left;
+	overflow: hidden;
+	margin: 10px;
+	
+}
+
+aside.right {	
+	float: left;
+	margin-left:10px ;
+}
+
+footer {
+	clear: both;
+	color: black; 
+	text-align: bottom left;
+	padding-top: 20px;
+	font-size: 80%;
+
+}
+
+
+div.product {
+	float: left;
+	border: 1px dotted red;
+	width: 248px;
+	height: 298px;
+}
+
+body.shoppingcart {
+	margin: 20px;
+}
+
+body.shoppingcart p {
+	margin-top: 20px;
+}
+
+body.shoppingcart table {
+	border-collapse: collapse;
+}
+
+body.shoppingcart caption {
+	color: red;
+	text-decoration:underline;
+	
+}
+body.shoppingcart td, th {
+	border-collapse: collapse;
+	border: 1px solid black;
+	text-align: center;
+	padding: 2px;
+}
+
+div.register {
+	margin: 20px;
+	width: 500px;
+	
+	
+
+}
+
+div.register legend{
+	margin: 20px;
+
+}
+
+table.regi tr td {
+	vertical-align:top;
+	padding-left: 20px;
+	
+}
+
+td.alone {
+	text-align:center;
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script> 
+								
+			function TimeCheck() {
+				var today = new Date();
+				var sum = 0;
+						
+				for (i = 1; i <= 1000000; i++) { 
+					sum = sum + i;
+				}	
+				var aftercal = new Date();
+				var diff = aftercal - today;
+				document.write(diff + "밀리초가 걸렸음");
+			}
+			
+			TimeCheck();
+			
+
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

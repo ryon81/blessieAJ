@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Table example</title>
+		
+			<style> 
+				
+				#Number {
+					border: 4pt solid black;
+					font-size: 40pt;
+					background-color: yellow;
+				}
+				
+				#Number tr:nth-child(2n+1){
+					background-color: red;
+				}
+
+				#Number td:not([colspan="2"]) {
+					border: 4pt solid black;
+				}
+			
+			</style>
+
+	</head>
+	<body>
+		<table id="Number"> 
+				<tr>
+					<td>1</td>
+					<td rowspan="2">2</td>
+					<td>3</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td colspan="2"></td>
+				</tr>
+		</table>
+	</body>
+</html>

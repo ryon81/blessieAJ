@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Float 속성</title>
+			<style> 
+				img.a {
+					float:left;
+				}
+				
+			</style>	
+	</head>
+	<body>
+
+		<img src="images/Sunshine.jpg" width="160" height="120">
+		<p>
+삶이 그대를 속일지라도
+
+서러워 하거나 노여워하지 말라
+
+슬픔의 날엔 마음 가다듬고.
+
+자신을 믿으라
+
+이제 곧 기쁨의 날이 오리니.
+
+
+
+마음은 내일에 사는것
+
+오늘 비록 비참할지라도
+
+모든 것은 순간적이며
+
+그것들은 한결같이 지나가 버리고
+
+지나간 것은 값진 것이다
+		</p>
+		
+				<img class="a" src="images/Sunset.jpg" width="160" height="120">
+		<p>
+삶이 그대를 속일지라도
+
+서러워 하거나 노여워하지 말라
+
+슬픔의 날엔 마음 가다듬고.
+
+자신을 믿으라
+
+이제 곧 기쁨의 날이 오리니.
+
+
+
+마음은 내일에 사는것
+
+오늘 비록 비참할지라도
+
+모든 것은 순간적이며
+
+그것들은 한결같이 지나가 버리고
+
+지나간 것은 값진 것이다
+		</p>
+	</body>
+</html>

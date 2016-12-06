@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>My Web Page</title>
+		<style>
+			p, h1 {
+			font-family:sans-serif;
+			color:red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>class가  type1 인 헤딩입니다. </h1>
+		<h2>class가  type1 인 헤딩입니다. </h2>
+		<p>class가  type1 인 단락입니다. </p>
+		일반 라인입니다. 
+	</body>
+
+</html>

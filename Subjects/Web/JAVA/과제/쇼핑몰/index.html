@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>AJ마켓 - 쇼핑을 다 담다.</title>
+		<link type="text/css" rel="stylesheet" href="CSS\mystyle.css">
+		<script src="http://code.jquery.com/jquery-1.12.4.min.js"> </script>
+		<script>
+			$(document).ready(function () {
+				$("#left").click(function () {
+					$("#category2").attr("src","images/arrow2.png");
+					$("#iframe4").slideToggle("1");					
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<header class="top"> 
+			<a href=""><img  src="images/HMbanner_0721.jpg"></a>
+		</header>
+		<header class="buttom">
+			<a href="index.html"><img class="icon" src="images/Gmarket.jpg"></a>
+			<input class="search1" type="text"> 
+			<img class="search2" src="images/search.png">
+			<a href=""> <img class="rbanner" src="images/rightupper.jpg"> </a>
+		</header> 
+		
+		<nav>
+			<div class="left" id="left">
+				<a target="iframe4" href="category.html">
+				<img id="category" class="category" src="images\category_icon.png" alt="menuicon"> 전체카테고리
+				<img id="category2" class="category" src="images\arrow.png" alt="menuicon2" align="right">
+				</a>
+			</div>
+			<div class="center">
+				<ul class="menubar">
+					<li> <a href="">베스트</a> </li>
+					<li> <a href="">출첵/쿠폰</a> </li>
+					<li> <a href="">슈퍼딜</a> </li>
+					<li> <a href="">스마트배송</a> </li>
+					<li> <a href="">홈플러스</a> </li>
+					<li> <a href="">English</a> </li>
+					<li> <a href="">中文</a> </li>
+					<li> <a href="">G9</a> </li>
+				</ul>
+			</div>
+			<div class="right">
+				<ul class="regi">
+					<a href=""> <img id="regi2" class="regi" src="images\login.jpg" alt="login"> </a>
+					<a href=""> <img id="regi2" class="regi" src="images\register.jpg" alt="register"> </a>
+					<a href=""> <img id="regi2" class="regi" src="images\myshopping.jpg" alt="myshopping"> </a>
+					<a href=""> <img id="regi2" class="regi" src="images\cart.jpg" alt="cart"> </a>
+					<a href=""> <img id="regi2" class="regi" src="images\connecton.jpg" alt="conneton"> </a>
+				</ul>
+			</div>
+		</nav>
+				
+		<Section class="center"> 
+			<article class="cat">
+				<div>
+					<ul>
+						<li> <a target="iframe1" href="images\Banner1.jpg"> 브랜드패션 </a> </li>
+						<li> <a target="iframe1" href="images\Banner2.jpg"> 패션의류 잡화 뷰티 </a> </li>
+						<li> <a target="iframe1" href="images\Banner3.jpg"> 유아동 </a> </li>
+						<li> <a target="iframe1" href="images\Banner4.jpg"> 식품 생필품 </a> </li>
+						<li> <a target="iframe1" href="images\Banner5.jpg"> 홈데코 문구 취미 </a> </li>
+						<li> <a target="iframe1" href="images\Banner6.jpg"> 컴퓨터 디지털 가전 </a> </li>
+						<li> <a target="iframe1" href="images\Banner7.jpg"> 스포츠 건강 </a> </li>
+						<li> <a target="iframe1" href="images\Banner8.jpg"> 자동차 공구 </a> </li>
+						<li> <a target="iframe1" href="images\Banner9.jpg"> 여행 도서 티켓 e-쿠폰 </a> </li>
+					</ul>
+				</div>
+				<div>
+					<iframe src="images\FrameBanner1.jpg" class="iframe1" name="iframe1" scrolling="no" seamless>
+					</iframe>
+				</div>
+				<div>
+					<iframe class="iframe4" id="iframe4" name="iframe4" style="display: none" scrolling="no" seamless>
+					</iframe>
+				</div>
+			
+			</article>
+			<article class="banner1"> 
+				<iframe src="images\middlebanner.jpg" class="iframe2" name="iframe2" scrolling="no"; >
+				</iframe> 
+			</article>
+			<br><br>
+			<article class="banner2"> 
+				<div>
+					<ul>
+						<li> <a target="iframe3" href="images\lotte.png">롯데백화점</a> </li>
+						<li> <a target="iframe3" href="images\sinworld.png">신세계백화점</a> </li>
+						<li> <a target="iframe3" href="images\hy.png">현대백화점</a> </li>
+						<li> <a target="iframe3" href="images\cj.png">CJ몰</a> </li>
+						<li> <a target="iframe3" href="images\homeplus.png">홈플러스 당일배송</a> </li>
+						<li> <a target="iframe3" href="images\smart.png">스마트배송</a> </li>
+						<li> <a target="iframe3" href="images\global.png">해외직구</a> </li>
+					</ul>
+				</div>
+				<div>
+					<iframe src="images\lotte.png" class="iframe3" name="iframe3" scrolling="no";>
+					</iframe> 
+				</div>
+			</article>	
+			<article class="ft">
+				<div>
+					<p> (주) 이베이코리아의 사전 서면 동의 없이 G마켓사이트의 일체의 정보, 콘텐츠 및 UI등을 상업적 목적으로 전재, 전송, 스크래핑 등 무단 사용할 수 없습니다. <br>G마켓은 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 G마켓은 상품·거래정보 및 거래에 대하여 책임을 지지 않습니다. <br><br>
+					Copyright © eBay Korea Co., Ltd. All rights reserved. </p>
+				</div>
+			</article>
+		</Section>
+			
+		<footer class="fixed">			
+			<div>
+				<ul>
+					<li> <a href="index.html"> Home </a> </li>
+					<li> <a href=""> 검색 </a> </li>
+					<li> <a href=""> 장바구니 </a> </li>
+					<li> <a href=""> 나의 쇼핑정보 </a> </li>
+					<li> <a href=""> 고객센터 </a> </li>
+					<li> <a href=""> 플러스 상품 </a> </li>
+					<li> <a href="#top"> TOP </a> </li>					
+				</ul>
+			</div>
+		</footer>
+
+			
+
+	</body>
+</html>

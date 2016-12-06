@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<!--jQuery 라이브러리 참조. 최신버전은 사이트에 접속하여 항시 업데이트 가능-->
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"> </script>  
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+				$("#dog").attr("src","images/cardog.jpg");
+			});
+		});
+	</script>
+	
+	</head>
+
+	<body>
+		<img id="dog" src="images\dog.jpg" alt="" width="120" height="100" style="position: relative"> <br>
+		
+		<button> src() </button>
+		
+		
+		
+	</body>
+</html>

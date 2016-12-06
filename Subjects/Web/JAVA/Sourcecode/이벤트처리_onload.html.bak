@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+    <title>Onload</title>
+		<style>
+			p {color:red;}
+		</style>
+		<script>
+			var w
+			function onLoadDoc() {
+				alert("문서가 로드되었습니다.");
+				document.body.style.backgroundColor = "red";
+				w = window.open('', '', 'width=50, height=50');
+				w.document.write("<p>대박 세일 50%</p>");
+				w.moveTo(590,462);
+			}
+
+			//function onUnloadDoc() {
+			//	alert("다음에 또 뵙겠습니다.");
+			//}
+		</script>
+	</head>
+	<body onload="onLoadDoc();">
+		
+	</body>
+</html>

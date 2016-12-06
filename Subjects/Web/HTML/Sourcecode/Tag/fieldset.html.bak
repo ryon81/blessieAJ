@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Website</title>
+	</head>
+
+	<body>
+		<form>
+			<fieldset>
+				<legend> 차 선택> </legend>
+				<select name="Cars">
+					<option value="bmw">BMW</option>
+					<option value="benz">Benz</option>
+					<option value="hyundai" selected>현대자동차</option>
+					<option value="kia">기아자동차</option>
+				</select>
+
+				<select name="Cars">
+					<option value="bmw">BMW</option>
+					<option value="benz">Benz</option>
+					<option value="hyundai">현대자동차</option>
+					<option value="kia">기아자동차</option>
+				</select>
+			</fieldset>
+		</form>
+
+	</body>
+</html>

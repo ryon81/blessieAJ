@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<!--jQuery 라이브러리 참조. 최신버전은 사이트에 접속하여 항시 업데이트 가능-->
+	<style>
+		div {
+			width: 70px;
+			height: 50px;
+			float: left;
+			margin: 5px;
+			background: red;
+		}
+
+		.next {
+			background: blue;
+		}
+	</style>
+	
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"> </script>  
+	
+	</head>
+
+	<body>
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		
+		<script>
+			$(document).ready(function () {
+				var modwidth = 50;
+				$("div").click(function () {
+					$(this).width(modWidth).addClass("next");
+					modWidth -= 8;
+				});
+			});
+		</script>
+		
+	</body>
+</html>

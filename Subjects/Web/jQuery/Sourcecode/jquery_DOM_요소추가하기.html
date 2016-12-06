@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<!--jQuery 라이브러리 참조. 최신버전은 사이트에 접속하여 항시 업데이트 가능-->
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"> </script>  
+	<script>
+		$(document).ready(function () {
+			$("#button1").click(function () {
+				$("p").append("<b style='color:red'>Hello! </b>.");
+			});
+			$("#button2").click(function () {
+				$("p").prepend("<b style='color:red'>Hello! </b>.");
+			});
+		});
+	</script>
+	
+	</head>
+
+	<body>
+		<p> I would like to say: </p>
+		<button id="button1">append()</button>
+		<button id="button2">prepend()</button>
+		
+	</body>
+</html>

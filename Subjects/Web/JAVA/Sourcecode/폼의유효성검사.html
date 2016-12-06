@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+    <title>Onchange</title>
+		<script>
+			function checkNotEmpty(field) {						//필드 공백 체크
+				if (field.value.length == 0) {
+					alert("필드가 비어있네요!");
+					field.focus();
+					return false;
+				}
+				return ture;
+			}
+
+			function checkLength(elem, min, max) {				//필드 길이 체크
+				var s = elem.value;
+				if (s.length >= min && s.length <= max) {
+					return true;
+				} else {
+					alert(min + "문자와 " + max + " 문자 사이로 입력해주세요!");
+					elem.focus();
+					return false; 
+				}
+			}
+			
+			function checkNumeric(elem, msg) {					//필드 숫자만 입력 체크
+				var exp = /^[0-9]+$/;
+				if (elem.value.match(exp)) {
+					return true;
+				} else {
+					alert(msg);
+					elem.focus;
+					return false;
+				}
+
+			}
+
+			function checkSelection(elem, msg) {				//선택창 선택여부 체크
+				if (elem.value == 0) {
+					alert(msg);
+					elem.focus();
+					return false;
+				} else {
+					return true;
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<h3>회원가입</h3>
+		<form>
+			이름: <input type='text' id='name'> 
+			<input type='button' value='확인' onclick="checkNotEmpty(document.getElementById('name'))"> <br>
+			주소: <input type='text' id='addr'> <br>
+			생일: <input type='date' id='birthday'> <br>
+			아이디 (6~8 문자): <input type='text' id='username'> 
+			<input type='button' value='확인' onclick="checkLength(document.getElementById('username'),6,8)"> <br>
+			이메일: <input type='email' id='email'> <br>
+			휴대폰 (- 없이 입력): <input type='tel' id='phone'> 
+			<input type='button' value='확인' onclick="checkNumeric(document.getElementById('phone'),'숫자만 입력하세요!')"> <br>
+			좋아하는 과일 선택: <select id="fruit" class="required">
+				<option value="0"> 선택하세요 </option>
+				<option value="1"> 사과 </option>
+				<option value="2"> 배 </option>
+				<option value="3"> 바나나 </option>
+			<input type='button' value='확인' onclick="checkSelection(document.getElementById('fruit'),'하나를 반드시 선택해야 합니다!')"> <br>
+			<input type='submit' value='확인'>
+		</form>
+	</body>
+</html>

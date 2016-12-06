@@ -1,0 +1,307 @@
+* {
+	padding: 0px; 
+	margin: 0px;
+}
+
+body {
+	background-color: #FFFFFF;
+	text-align: center;
+
+}
+
+header.top {
+	background-color: #79ABFF;
+	text-align: center;
+	width: 100%;	
+}
+header.buttom {
+	background-color: #FFFFFF;
+	text-align: center;
+	width: 100%;
+	min-width: 1300px;
+}
+
+img.icon {
+	text-align: left;
+	vertical-align: middle;
+	clear: both;
+}
+	
+img.rbanner {
+	text-align: left;
+	display: inline-block;
+	vertical-align: middle;
+	clear: both;
+}			
+
+input.search1 {
+	width: 500px;
+	height: 40px;
+	padding-right: 20px;
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 40px;
+	margin-top: 20px;
+	border:3px solid blue;
+	border-radius: 8px;
+	clear: both;
+}			
+
+img.search2 {
+	text-align: center;
+	margin-right:100px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 20px;
+	transform: translate(-40px,0px);
+	clear: both;
+}
+
+img.category {
+	width: 20px ;
+	height: 20px ;
+	vertical-align: middle;
+}
+
+nav {
+	display: inline-block;
+	text-align: center;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	width: 100%;
+	min-width: 1300px;
+}
+
+div.left {
+	width:200px;
+	min-width:200px;
+	text-align:left;
+	border-left: 0.5px solid gray;
+	border-right: 0.5px solid gray;
+	font-size: 20px;
+	display:inline-block;
+	vertical-align:middle;
+	padding:12px;
+	
+}
+div.left a {
+	text-decoration:none;
+	color:black;
+	display:block;	
+}
+
+div.left:hover {
+	text-decoration:none;
+	background-color:#2478FF;
+	src:'images\Banner1.jpg';
+	
+}
+
+div.left a:active {
+	text-decoration:none;
+	background-color:#2478FF;
+	src:'images\Banner1.jpg';
+}
+
+div.center {
+	width:667px;
+	min-width:667px;
+	text-align:left;	
+	font-size: 14px;
+	display:inline-block;	
+	vertical-align:middle;
+	padding:0px;
+}
+
+div.right {
+	width: 300px;
+	min-width:300px;
+	display:inline-block;
+	vertical-align:middle;
+	padding:0px;
+}
+
+.regi a {
+	text-decoration:none;
+	color:black;
+}
+
+ul.menubar li {
+	display: inline;
+	border-right: 0.5px solid gray;
+	padding-right: 5px;
+	padding-left: 10px;
+	
+}
+ul.menubar li:last-child { border-right: 0px;}
+
+ul.menubar li a{
+	text-decoration:none;
+	color:black;
+	font-weight: bold;
+}
+
+div.right li {
+	display: inline;
+	clear: both;	
+}
+section {
+	width: 100%;
+	min-width: 1300px;
+}
+
+section article {
+	display: inline-block;
+	text-align: center;
+	width: 1197px;
+	min-width: 1197px;	
+}
+
+
+article.cat div {
+	display: table-cell;
+	vertical-align: top;	
+}
+
+article.cat ul {
+	display: inline-block;
+	list-style:none;
+	line-height:54px;
+	width:222px;
+}
+
+article.cat ul li {
+	border: 0.5px solid #EAEAEA;
+	background-color: #2478FF;
+}
+
+article.cat ul li a {
+	text-decoration:none;
+	display: block;
+	color:#FAF4C0;
+
+}
+article.cat ul li a:hover {
+	background-color: #0030DB;	
+}
+
+article.cat ul li a:active {
+	background-color: #0030DB;	
+}
+
+iframe.iframe1 {
+	border: 0px;
+	width: 975px;
+	height: 503px;
+	text-align:left;
+}
+
+iframe.iframe4 {
+	border: 0px;
+	width: 1197px;
+	height: 503px;
+	text-align:center;
+	margin-left: -1200px;
+}
+
+iframe.iframe2 {
+	border: 0px;
+	width: 1197px;
+	height: 497px;
+	text-align:center;
+}
+
+article.banner2 ul {
+	display: inline-block;
+	list-style:none;
+	line-height:54px;
+	width:1197px;
+	border-bottom: 4px solid gray;
+	font-size: 20px;
+}
+
+article.banner2 ul li{
+	display: inline;
+	padding-left: 30px;
+	padding-right: 30px;
+	}
+
+article.banner2 a{
+	text-decoration:none;
+	display: inline-block;
+	color:gray;	
+	}
+
+iframe.iframe3 {
+	border: 0px;
+	width: 1197px;
+	height: 497px;
+	text-align:center;
+}
+article.ft {
+	display: inline-block;
+	width: 1197px;
+	min-width: 1197px;
+	text-align:left;
+	font-size:12px;	
+}
+
+footer.fixed {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	min-width: 1300px;
+	height: 40px;
+	font-size: 14px;
+	padding-top: 26px;
+	background-color: #D9E5FF;
+	border: 1px solid black;
+	letter-spacing: 4px;
+
+}
+
+.fixed div ul {
+	list-style:none;
+}
+
+.fixed div ul li {
+	display: inline-block;
+	border-right: 0.5px solid gray;
+	padding-right: 10px;
+	padding-left: 5px;
+	
+}
+
+.fixed div ul li:first-child { 
+	border-left: 0.5px solid gray;
+	padding-left: 15px;
+}
+
+.fixed div ul li a {
+	text-decoration:none;
+	display: block;
+	color:#2478FF;
+}
+
+
+table.cattable {
+	border: 0.5px solid #2478FF;
+	font-size: 15px;
+}
+
+table.cattable th {
+	background-color: #D9E5FF;
+	font-size: 18px;
+	padding: 8px;
+}
+table.cattable td {	
+	vertical-align: top;
+	text-align: left;
+	padding: 13px;
+}
+	
+	
+	
+

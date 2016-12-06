@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<!--jQuery 라이브러리 참조. 최신버전은 사이트에 접속하여 항시 업데이트 가능-->
+	</head>
+
+	<body>
+		<h4>학생 명단</h4>
+		<p style="background-color: yellow"> 
+			이름: <span id="name"></span>&nbsp 
+			나이: <span id="age"></span> 
+		</p>
+
+		<script>
+			var s = '[' + 
+			'{"name":"hong","age":"21"},' +
+			'{"name":"Kim","age":"22"},' +
+			'{"name":"Park","age":"23"}]';
+
+			var students = JSON.parse(s);
+
+			students[1].name = "Lee";
+			document.getElementById("name").innerHTML = students[1].name;
+			document.getElementById("age").innerHTML = students[1].age;
+		</script>
+	</body>
+</html>

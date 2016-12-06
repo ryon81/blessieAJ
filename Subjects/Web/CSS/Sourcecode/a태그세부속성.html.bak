@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+			<style> 
+				
+				a:link {color: red; }
+				a:visited {color: green; }
+				a:hover {color: blue; }
+				a:active {color: yellow; }
+
+			</style>	
+	</head>
+	<body>
+		<p> <a href="http://www.naver.com/" target="_blank"> 여기가 링크입니다. </a>
+		</p>
+		<p> <a href="http://www.google.com/" target="_blank"> 여기가 링크입니다. </a>
+		</p>
+		<p> <a href="http://www.kkk.com/" target="_blank"> 여기가 링크입니다. </a>
+		</p>
+	</body>
+</html>

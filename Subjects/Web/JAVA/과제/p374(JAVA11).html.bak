@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		
+	</head>
+	<body>
+		<div id="Calender"> </div>
+		<script> 
+			function setCalender() {
+				var now = new Date();
+				var s = now.getMonth() + '월' + now.getDate() + "일";
+				document.getElementById('Calender').innerHTML = s;
+				setTimeout('setCalender()', 86400000);
+			}
+			setCalender();			
+		</script>
+		
+	</body>
+</html>

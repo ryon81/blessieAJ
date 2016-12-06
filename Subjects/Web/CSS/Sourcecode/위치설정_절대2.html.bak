@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>절대위치 설정</title>
+			<style> 
+				p {
+					background-color: lightgreen;
+					width: 200px;
+					height: 50px;
+				}
+				#target {
+					border: 2px solid black;
+					width: 300px;
+					height: 100px;
+					
+				}
+				#target1 {
+					border: 2px solid red;
+					width: 300px;
+					height: 100px;
+					overflow: hidden;
+				}
+				#target2 {
+					border: 2px solid blue;
+					width: 300px;
+					height: 100px;
+					overflow: auto;
+				}
+
+			</style>	
+	</head>
+	<body>
+		<div id="target"> 
+			<p>block #1</p>
+			<p>block #2</p>
+			<p>block #3</p>
+			<p>block #4</p>
+			<p>block #5</p>
+		</div> 
+		<br>
+		<div id="target1"> 
+			<p>block #1</p>
+			<p>block #2</p>
+			<p>block #3</p>
+			<p>block #4</p>
+			<p>block #5</p>
+		</div> 
+		<br>
+		<div id="target2"> 
+			<p>block #1</p>
+			<p>block #2</p>
+			<p>block #3</p>
+			<p>block #4</p>
+			<p>block #5</p>
+		</div> 
+				
+	</body>
+</html>

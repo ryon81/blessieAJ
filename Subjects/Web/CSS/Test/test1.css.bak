@@ -1,0 +1,5 @@
+body h1 { font-family:gungsuh; font-size:25pt }
+body h2 { font-family:gungsuh;  }
+body strong {font-family:Segoe Script; color: orange; font-size:15pt}
+body em {font-family:Verdana; color: orange; font-size:15pt}
+ul ul li {color: red; font-family:gulim; font-weight:bold; font-size:18pt }

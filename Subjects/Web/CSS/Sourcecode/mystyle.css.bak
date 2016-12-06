@@ -1,0 +1,3 @@
+h1 { font-family:Segoe Script;  }
+h2 { font-family:Segoe Script;  }
+body strong {color: yellow}

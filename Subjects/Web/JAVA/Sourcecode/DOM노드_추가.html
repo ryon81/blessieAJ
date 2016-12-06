@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function addtext(t) {
+				if (document.createTextNode) {
+					var node = document.createTextNode(t);
+					document.getElementById("target").appendChild(node);
+				}
+			}
+		</script>
+		
+		<div id="target" onclick="addtext('동적으로 텍스트가 뒤에 추가됩니다.')" style="font:20px bold;"> 여기를 클릭하세요. </div>
+
+		<script>
+			function addtext2(t) {
+				if (document.createTextNode) {
+					var node = document.createTextNode(t);
+					document.getElementById("target2").insertBefore(node, document.getElementById("target2").firstChild);
+				}
+			}
+		</script>
+		
+		<div id="target2" onclick="addtext2('동적으로 텍스트가 앞에 추가됩니다.')" style="font:20px bold; color:red"> 여기를 클릭하세요. </div>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+create or replace procedure findTable(v_empno out number, v_ename out varchar, v_job out varchar, v_mgr out number, v_hiredate out varchar, v_sal out number, v_comm out number, v_deptno out number)
+is 
+empno number(4);
+ename varchar2(10);
+job varchar2(9);
+mgr number(4);
+hiredate date;
+sal number(7,2);
+comm number(7,2);
+deptno number(2);
+begin 
+select *
+into v_empno, v_ename, v_job, v_mgr, v_hiredate, v_sal, v_comm, v_deptno
+from emp01;
+end findTable; 
+/

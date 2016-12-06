@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script> 
+			var i;
+			var planet = new Array();		//var furits = new Array("Apple","Banana","Orange"); 형태로도 가능함
+			fruits[0]="수성";
+			fruits[1]="금성";
+			fruits[2]="지구";
+			fruits[3]="화성";
+			fruits[4]="목성";
+			fruits[5]="토성";
+			fruits[6]="천왕성";
+			fruits[7]="해왕성";
+			
+			for (i=0;i <fruits.length ;i++ ) {
+				alert(fruits[i]);
+			}
+
+		</script>
+	</head>
+	<body>
+  
+	</body>
+</html>

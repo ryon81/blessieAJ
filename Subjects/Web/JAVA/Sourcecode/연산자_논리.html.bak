@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		
+	</head>
+	<body>
+		<script> 
+			var x=10;
+			var y=20;
+			
+			document.write((x>Y) + "<br>");
+			document.write((x<Y) + "<br>");
+			document.write((x==Y) + "<br>");
+			document.write((x!=Y) + "<br>");
+			document.write((x >= Y) + "<br>");
+			document.write((x <= Y) + "<br>");
+		</script>
+	</body>
+</html>

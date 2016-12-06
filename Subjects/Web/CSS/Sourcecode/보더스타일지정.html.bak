@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+			<style> 
+			p.thin {
+			border-style: solid;
+			border-width: 1px;
+			}
+			p.thin2 {
+			border-style: solid;
+			border-width: 2px;
+			}
+			p.medium {
+			border-style: solid;
+			border-width: medium;
+			}
+			p.Thick {
+			border-style: solid;
+			border-width: Thick;
+			border-color: green;
+			}
+
+			p.united {
+			border:3px double blue;
+			}
+	
+			p.radius {
+			border:3px double blue;
+			border-radius:25px;
+			padding:10px 20px;
+			}
+
+			p.radius2 {
+			border:3px double blue;
+			border-radius:25px 25px 50px 25px;
+			}
+			</style>
+
+	</head>
+	<body>
+		<p style="border-style: none"> none</p>
+		<p style="border-style: dotted"> dotted </p>
+		<p style="border-style: dashed"> dashed </p>
+		<p style="border-style: solid"> solid </p>
+		<p style="border-style: double"> double </p>
+		<p style="border-style: groove"> groove </p>
+		<p style="border-style: ridge"> ridge </p>	
+		<p style="border-style: inset"> inset </p>
+		<p style="border-style: outset"> outset </p>
+		
+		<p style="border-top-style: dotted; border-right-style: solid; border-bottom-style: double; border-left-style: dashed"> 4개의 경계선이 모두 다르게 설정됨 </p>
+
+		<p class="thin"> 경계선이 1px으로 설정되어 있음 </p>
+		<p class="thin2"> 경계선이 5px으로 설정되어 있음 </p>
+		<p class="medium"> 경계선이 medium으로 설정되어 있음 </p>
+		<p class="Thick"> 경계선이 Thick으로 설정되어 있음 </p>
+		
+		<p class="united"> 한방에 다 넣음 </p>
+
+		<p class="radius"> 원형 귀퉁이 사각형만들기</p>
+
+		<p class="radius2"> <br>원형 귀퉁이 사각형만들기2<br><br></p>
+	</body>
+</html>

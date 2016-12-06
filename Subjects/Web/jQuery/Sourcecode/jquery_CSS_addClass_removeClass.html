@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<!--jQuery 라이브러리 참조. 최신버전은 사이트에 접속하여 항시 업데이트 가능-->
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"> </script>  
+	<script>
+		$(document).ready(function () {
+			$("#button1").click(function () {
+				$("#div1").addClass("warning");
+			});
+			$("#button2").click(function () {
+				$("#div1").removeClass("warning");
+			});
+		});
+	</script>
+	
+	<style>
+		.warning {
+			border:1px solid black;
+			background-color: yellow;
+		}
+	</style>
+	
+	</head>
+
+	<body>
+		<div class="warning">
+			<p>원래 단락입니다. </p>
+		</div>
+
+		<div id="div1">
+			<p>예제 단락입니다. </p>
+		</div>
+		<br>
+		<button id="button1">addClass()</button>
+		<button id="button2">removeClass()</button>
+		
+	</body>
+</html>

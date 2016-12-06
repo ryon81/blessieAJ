@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Website</title>
+	</head>
+
+	<body>
+		
+		<form name="input" action="http://www.naver.com" method="get"> 
+		
+			<fieldset> 
+				<legend>인적사항 입력</legend>
+
+		이름: <input type="text" name="name"> <br>
+		학번: <input type="text" name="number" size=10> <br>
+		비밀번호: <input type="password" name="Pass"> <br>
+		
+		<label for="male">남성</label>
+		<input type="radio" name="Gender" id="male" value="male"> <br>
+		<input type="radio" name="Gender" value="female"> 여성 <br>
+		
+		<input type="radio" name="What" value="Student"> 학생
+		<input type="radio" name="What" value="Work"> 직장인 <br>
+		
+		과일선택: 
+		<input type="checkbox" name="fruits" value="apple" checked> 사과
+		<input type="checkbox" name="fruits" value="grape"> 포도
+		<input type="checkbox" name="fruits" value="orange"> 오렌지
+		<input type="checkbox" name="fruits" value="wartermelon"> 수박 <br>
+		
+		<input type="submit" value="제출">
+		<input type="reset" value="초기화"> <br>
+		
+		물품가격: <input type="text" name="user"> <br>
+		수량: <input type="text" name="user"> <br>
+		<input type="button" value="계산" onclick="alert('10000원입니다.')"> <br>
+
+		<input type="image" src="Images/button.jpg" alt="제출 버튼"><br>
+		</fieldset>
+
+				<fieldset> 
+					<legend>차량 입력</legend>
+				<select name="Cars">
+					<option value="bmw">BMW</option>
+					<option value="benz">Benz</option>
+					<option value="hyundai" selected>현대자동차</option>
+					<option value="kia">기아자동차</option>
+				</select>
+				</fieldset>
+		</form>
+		
+
+	</body>
+</html>

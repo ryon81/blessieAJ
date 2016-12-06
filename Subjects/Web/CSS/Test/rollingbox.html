@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  
+		<title>localhost</title>
+
+		<style> 
+		 
+			@keyframes rollingbox {
+				from, to {
+					top: 20px; 
+					left: 20px;
+					animation-timing-function: ease-out;
+				}
+				
+				
+				50% {
+					top: 20px; 
+					left: 620px; 
+					animation-timing-function: ease-out;
+					transform: rotate(720deg);
+				}
+
+				
+						
+				
+			}
+			#box {
+				position: absolute; 
+				width: 100px; 
+				height: 100px;
+				background:red;
+				animation-name: rollingbox; 
+				animation-iteration-count: infinite; 
+				animation-duration: 10s;				
+				
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div id="box"> </div>
+		
+	</body>
+</html>
+
+	

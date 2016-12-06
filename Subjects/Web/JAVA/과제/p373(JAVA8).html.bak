@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script> 
+			var arr = ["사과","오렌지", "귤", "당근", "케일"];
+			
+			
+			var i = parseInt(Math.random() * 5);
+								
+			alert(arr[i]);
+			
+		</script>
+	</head>
+	<body>
+  
+	</body>
+</html>

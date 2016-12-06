@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Website</title>
+	</head>
+
+	<body>
+
+		<div style="height:20px; background-dolor:yellow">		</div>
+		<div style="height:20px; background-dolor:green">		</div>
+		<div style="height:20px; background-dolor:purple">		</div>
+	
+	</body>
+
+</html>

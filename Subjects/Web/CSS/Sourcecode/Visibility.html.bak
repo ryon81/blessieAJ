@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+  
+		<title>CSS Visibility</title>
+
+		<style> 
+			#a {
+				visibility: hidden;
+				border:1px dotted red; 
+			}
+			
+			#b {
+				visibility: visible;
+				border:1px dotted red; 
+			
+			#c {
+				display:none;
+				border:1px dotted blue;
+			}
+		
+		</style>
+	</head>
+	<body>
+		<h1>Visibility 속성 </h1>
+			<img id="a" src="images/lion.jpg" width="150" height="120" alt="lion">
+			<img id="b" src="images/audio.jpg" width="150" height="120" alt="audio">
+		<br><br><br><br><br>
+		<h1>Display 속성 </h1>
+			<img id="c" src="images/hong.png" width="150" height="120" alt="hong">
+			<img id="b" src="images/audio.jpg" width="150" height="120" alt="audio">
+	</body>
+</html>

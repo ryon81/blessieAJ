@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script> 
+			var i;
+			var movies = new Array("터미네이터","트랜스포머");	
+			
+			add("맨오브스틸");
+			
+			for (i=0;i <movies.length ;i++ ) {
+				document.write(movies[i] + "<br>");
+			}
+
+			
+			replace()
+		</script>
+	</head>
+	<body>
+  
+	</body>
+</html>

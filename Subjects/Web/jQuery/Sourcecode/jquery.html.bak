@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.12.4.min.js"> </script>  <!--버전은 사이트에 접속하여 업데이트 가능-->
+	<script>
+		$(document).ready(function () {
+			$("h2").click(function () {$(this).hide();});
+		});
+	</script>
+ </head>
+ <body>
+	<h2> 클릭하면 사라집니다. </h2>  
+ </body>
+</html>
