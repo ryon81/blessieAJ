@@ -18,6 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
+import javax.swing.table.DefaultTableModel;
 
 public class MyFrame_JTable extends JFrame
 {
@@ -34,10 +35,10 @@ public class MyFrame_JTable extends JFrame
 	JTable table;
 	JScrollPane scrollPane;
 	
-	Object[][] cell_value;	
-	String ColName[] = {"사번", "이름", "직책", "매니저", "입사일", "급여", "상여금", "부서번호"};
+	Object[][] data;	
+	String[] ColStr;	
 		
-	ResultSetMetaData rsmd;
+	ResultSetMetaData rsmd;	
 	
 	public MyFrame_JTable()
 	{
@@ -58,7 +59,7 @@ public class MyFrame_JTable extends JFrame
 		} catch (SQLException e)
 		{
 			System.err.println("SQLException: " + e.getMessage());
-		}	
+		}			
 		
 		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
 		
@@ -81,7 +82,8 @@ public class MyFrame_JTable extends JFrame
 		getContentPane().add(pane2);
 		pane2.setLayout(new BoxLayout(pane2, BoxLayout.X_AXIS));
 				
-		table = new JTable(cell_value, ColName);
+		
+		table = new JTable(data, col);
 		pane2.add(table);
 		scrollPane = new JScrollPane(table);
 		getContentPane().add(scrollPane, BorderLayout.CENTER);
@@ -96,41 +98,63 @@ public class MyFrame_JTable extends JFrame
 	class ButtonSelectEvent implements ActionListener
 	{
 		public void actionPerformed(ActionEvent e)
-		{			
-			table.setValueAt(rsmd, table.getRowCount(), table.getColumnCount());;
-			sql=textArea.getText();
-			System.out.println(sql);
-			
+		{								
 			try
-			{
+			{					
+				sql=textArea.getText();		
 				rs = stmt.executeQuery(sql);
 				rsmd = rs.getMetaData();
-				
-				for (int i=1; i<=rsmd.getColumnCount(); i++)
+				int colNum = rsmd.getColumnCount();
+								
+				//컬럼명 넣기//
+				for (int i=1; i<=colNum; i++)
 				{
-					col = new String[rsmd.getColumnCount()];
-					col[i-1] = rsmd.getColumnLabel(i);
-					table.setValueAt(col[i-1] + "\t", i, 0); 
+					col = new String[colNum];
+					col[i-1] = rsmd.getColumnName(i);					
 				}
-							
-				//textArea2.append("\n");
+				
+				data = new String[0][colNum];						
+				
+				//테이블에 결과 넣기
+				String data;
+				int cnt1=1;
 				while(rs.next())
 				{
-					for (int i=1; i<=rsmd.getColumnCount();i++)
+					String ColStr[] = new String[colNum+1];
+					ColStr[0] = String.valueOf(cnt1);
+					for(int i =1; i<colNum;i++)
+					{
+						if(rs.getObject(i) != null)
+						{
+							data = rs.getObject(i).toString();							
+						} else 
+						{
+							data = "";
+						}
+						ColStr[i] = data;												
+					}
+					data.addRow(ColStr);
+					cnt1++;
+					
+					/*for (int i=1; i<=rsmd.getColumnCount();i++)
 					{						
 						if(rsmd.getColumnTypeName(i).equals("VARCHAR2") || rsmd.getColumnTypeName(i).equals("Date"))
 						{
-							table.setValueAt(rs.getString(i)+"\t", i, 0);
+							ColStr[i-1] = rs.getString(i);
+							table.(ColStr[i-1]);
+							textArea2.append(rs.getString(i)+"\t");
 						} else if (rsmd.getColumnTypeName(i).equals("NUMBER"))
 						{
-							table.setValueAt(rs.getInt(i)+"\t", i, 0);
+							ColInt[i-1] = rs.getInt(i);
+							textArea2.append(rs.getInt(i)+"\t");
+							table.setValueAt(rs.getInt(i)+"\t", i+1, 1);
 						}
-					}				
+					}	*/			
 					
 				}				
 			} catch (SQLException ex) 
 			{
-				//textArea2.append("\r\n " + "조회 명령에 오류가 있어 작업이 실패했습니다.");
+				textArea.append("\r\n " + "조회 명령에 오류가 있어 작업이 실패했습니다.");
 			} finally
 			{
 				sql = "";
