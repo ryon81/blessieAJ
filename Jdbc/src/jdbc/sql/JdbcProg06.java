@@ -9,8 +9,8 @@ public class JdbcProg06
 		String jdbc_url = "jdbc:oracle:thin:@127.0.0.1:1521:orcl";
 		Connection con;
 		Statement stmt;
-		int empNo, grade;
-		String ename, dname ;
+		int empNo, comm, mgr, sal, deptno;
+		String ename, job, hiredate;
 		
 		try
 		{
@@ -22,27 +22,32 @@ public class JdbcProg06
 		
 		try 
 		{
+			String sql = "select * from emp";
+			
 			con = DriverManager.getConnection(jdbc_url, "scott", "tiger");
 			stmt = con.createStatement();
 			
-			CallableStatement cs = con.prepareCall("begin findTable(?,?); end;");
-			
-			cs.setInt(1, 1000);
-			cs.registerOutParameter(2, oracle.jdbc.OracleTypes.CURSOR);
-			cs.execute();
-			ResultSet rs = (ResultSet)cs.getObject(2);
+			ResultSet rs = stmt.executeQuery(sql);
+			ResultSetMetaData rsmd = rs.getMetaData();
 						
-			System.out.println("empno" + " " + "ename"+ "  " + "dname" + " " + "grade");
-			System.out.println("==================================================");
+			//cs.setInt(1, 1000);
+			//cs.registerOutParameter(2, oracle.jdbc.OracleTypes.CURSOR);
+			//cs.execute();
+			//ResultSet rs = (ResultSet)cs.getObject(2);
 			
-			while (rs.next())
+			while(rs.next())
 			{
-				empNo = rs.getInt("empno");
-				ename = rs.getString("ename");
-				dname = rs.getString("dname");
-				grade = rs.getInt("grade");
-				
-				System.out.println(empNo + "  " + ename + "  " + dname + " " + grade);
+				for (int i=1; i<=rsmd.getColumnCount();i++)
+				{						
+					if(rsmd.getColumnTypeName(i).equals("VARCHAR2") || rsmd.getColumnTypeName(i).equals("Date"))
+					{
+						System.out.print(rs.getString(i)+"\t");
+					} else if (rsmd.getColumnTypeName(i).equals("NUMBER"))
+					{
+						System.out.print(rs.getInt(i)+"\t");
+					}
+				}
+				System.out.println();;
 			}
 
 			rs.close();
