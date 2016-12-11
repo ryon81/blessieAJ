@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%
-	String pagefile=request.getParameter("page");
+	String pagefile = request.getParameter("page");
 	if(pagefile == null){pagefile="newitem";}
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,9 +9,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Template Test</title>
-</head>
+ </head>
+
 <body>
-<table width="960" border="1" bgcolor="gray" align="center">
+
+<table>
+
 <tr>
 <td height="43" colspan=3 align=left>
 <jsp:include page="top.jsp"/>
@@ -31,6 +34,7 @@
 </td>
 </tr>
 
-</table>
+</table> 
+ 
 </body>
 </html>
