@@ -7,7 +7,7 @@ import java.awt.TextField;
 
 import javax.swing.JFrame;
 
-public class Login extends JFrame
+class Login extends JFrame
 {
 	JFrame f = new JFrame();
 	
@@ -29,6 +29,13 @@ public class Login extends JFrame
 		f.add(lpwd);
 		f.add(pwd);
 		f.setVisible(true);
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		new Login();
+				
 	}
 
 }
