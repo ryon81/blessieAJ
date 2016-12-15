@@ -12,3 +12,5 @@ create table member
 select * from member
 
 drop table member
+
+alter table member add regdate date 
