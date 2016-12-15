@@ -11,6 +11,10 @@ create table member
 
 select * from member
 
+desc member
+
 drop table member
 
 alter table member add regdate date 
+
+insert into member values('aaa','1234','Àü¿µ¹Î','35','male','a@naver.com',sysdate)
