@@ -1,9 +1,11 @@
 package net.board.db;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class BoardFrontController extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet 
 { 
@@ -32,7 +34,7 @@ public class BoardFrontController extends javax.servlet.http.HttpServlet impleme
 			}
 		} else if(command.equals("/BoardDelete.bo"))
 		{
-			forward = new ActionFoward();
+			forward = new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath("./board/qna_board_delete.jsp");			
 		} else if(command.equals("/BoardModify.bo"))
