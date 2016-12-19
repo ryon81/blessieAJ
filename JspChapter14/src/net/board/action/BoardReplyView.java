@@ -1,7 +1,10 @@
-package net.board.db;
+package net.board.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import net.board.db.BoardBean;
+import net.board.db.BoardDAO;
 
 public class BoardReplyView implements Action
 {	

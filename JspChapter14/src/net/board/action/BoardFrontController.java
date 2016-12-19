@@ -1,4 +1,4 @@
-package net.board.db;
+package net.board.action;
 
 import java.io.IOException;
 
@@ -11,9 +11,9 @@ public class BoardFrontController extends javax.servlet.http.HttpServlet impleme
 { 
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		String RequestURL=request.getRequestURI();
+		String RequestURI=request.getRequestURI();
 		String contextPath=request.getContextPath();
-		String command = RequestURL.substring(contextPath.length());
+		String command = RequestURI.substring(contextPath.length());
 		ActionForward forward = null;
 		Action action = null;
 		
@@ -88,8 +88,9 @@ public class BoardFrontController extends javax.servlet.http.HttpServlet impleme
 				e.printStackTrace();
 			}			
 		} else if(command.equals("/BoardList.bo"))
-		{
+		{			
 			action = new BoardListAction();
+			System.out.println("/BoardList.bo");
 			try
 			{
 				forward = action.execute(request, response);

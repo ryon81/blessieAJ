@@ -1,4 +1,4 @@
-package net.board.db;
+package net.board.action;
 
 import java.util.*;
 

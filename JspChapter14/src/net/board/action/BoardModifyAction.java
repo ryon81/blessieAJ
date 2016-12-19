@@ -1,9 +1,12 @@
-package net.board.db;
+package net.board.action;
 
 import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import net.board.db.BoardBean;
+import net.board.db.BoardDAO;
 
 public class BoardModifyAction implements Action 
 {	
