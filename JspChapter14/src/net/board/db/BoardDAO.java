@@ -34,8 +34,7 @@ public class BoardDAO {
 		
 		try{
 			
-			con=ds.getConnection();
-			System.out.println("getConnection");
+			con=ds.getConnection();			
 			pstmt=con.prepareStatement("select count(*) from board");
 			rs = pstmt.executeQuery();
 			

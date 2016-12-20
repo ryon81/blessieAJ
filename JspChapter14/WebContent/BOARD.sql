@@ -18,3 +18,14 @@ select * from board
 
 desc board
 
+create table board01
+as select * from board
+
+select * from board01
+
+drop table board
+
+update board set BOARD_READCOUNT = BOARD_READCOUNT+1 where BOARD_NUM = 8
+
+
+select * from board where BOARD_NUM = 13

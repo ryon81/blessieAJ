@@ -70,7 +70,7 @@ function modifyboard()
 	<tr align="center" valign="middle">
 		<td colspan="5">
 			<font size=2>
-			<a href="javascript:mofifyboard()">[수정]</a>&nbsp;&nbsp;
+			<a href="javascript:modifyboard()">[수정]</a>&nbsp;&nbsp;
 			<a href="javascript:history.go(-1)">[뒤로]</a>&nbsp;&nbsp;
 			</font>
 		</td>

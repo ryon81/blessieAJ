@@ -89,8 +89,7 @@ public class BoardFrontController extends javax.servlet.http.HttpServlet impleme
 			}			
 		} else if(command.equals("/BoardList.bo"))
 		{			
-			action = new BoardListAction();
-			System.out.println("/BoardList.bo");
+			action = new BoardListAction();			
 			try
 			{
 				forward = action.execute(request, response);
@@ -98,7 +97,7 @@ public class BoardFrontController extends javax.servlet.http.HttpServlet impleme
 			{
 				e.printStackTrace();
 			}			
-		} else if(command.equals("/BoardDetailList.bo"))
+		} else if(command.equals("/BoardDetailAction.bo"))
 		{
 			action = new BoardDetailAction();
 			try

@@ -71,7 +71,7 @@
 			<%} else {%>
 				▶
 			<%} %>
-			<a href="./BoardDetailAction.bo?<%=bl.getBOARD_NUM()%>">
+			<a href="./BoardDetailAction.bo?num=<%=bl.getBOARD_NUM()%>">
 				<%=bl.getBOARD_SUBJECT()%>
 			</a>
 			</div>
@@ -130,7 +130,7 @@
 	%>
 	<tr align="right">
 		<td colspan="5">
-			<a href="./BoardWhite.bo">[글쓰기]</a>
+			<a href="./BoardWrite.bo">[글쓰기]</a>
 		</td>
 	</tr>
 </table>

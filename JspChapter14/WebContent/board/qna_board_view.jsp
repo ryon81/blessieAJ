@@ -29,7 +29,7 @@
 			<div align="center">³»¿ë</div>
 		</td>
 		<td style="font-family:µ¸À½; font-size:12">
-			<table border=0 width=490 heigth=250 style="table-layout:fixed">
+			<table border=0 width=490 height=250 style="table-layout:fixed">
 				<tr>
 					<td valign=top style="font-family:µ¸À½; font-size:12">
 					<%=board.getBOARD_CONTENT() %>
@@ -44,7 +44,7 @@
 		</td>
 		<td style="font-family:µ¸À½; font-size:12">
 		<%if(!(board.getBOARD_FILE()==null)){ %>
-		<a href="./boarduplaod/"<%=board.getBOARD_FILE() %>">
+		<a href="./boardupload/<%=board.getBOARD_FILE() %>">
 			<%=board.getBOARD_FILE() %>
 		</a>
 		<%} %>
