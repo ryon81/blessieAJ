@@ -48,7 +48,7 @@
 		</td>
 		<td style="font-family:µ¸À½; font-size:12">
 		<%if(!(board.getBOARD_FILE()==null)){ %>
-		<a href="/board/file_down.jsp?file_name=<%=board.getBOARD_FILE() %>">
+		<a href="./board/file_down.jsp?file_name=<%=board.getBOARD_FILE() %>">
 			<%=board.getBOARD_FILE() %>
 		</a>
 		<%} %>

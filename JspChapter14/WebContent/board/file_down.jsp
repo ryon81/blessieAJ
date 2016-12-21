@@ -6,7 +6,7 @@
 <%
 	BoardBean board = (BoardBean)request.getAttribute("boarddata");
 		
-	String fileName = board.getBOARD_FILE();	
+	String fileName = request.getParameter("file_name");	
 	
 	String savePath = "./boardupload";
 	ServletContext context = getServletContext();
