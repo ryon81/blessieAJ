@@ -6,15 +6,12 @@
 <%
 	BoardBean board = (BoardBean)request.getAttribute("boarddata");
 		
-	String fileName = board.getBOARD_FILE();	
+	String fileName = request.getParameter("filename"); 	
 	
-	String savePath = "./boardupload";
+	String savePath = "boardupload";
 	ServletContext context = getServletContext();
 	String sDownloadPath = context.getRealPath(savePath);
 	String sFilePath = sDownloadPath + "\\" + fileName;
-	
-	System.out.println(fileName);
-	System.out.println(sFilePath);
 	
 	byte b[] = new byte[4096];
 	File oFile = new File(sFilePath);

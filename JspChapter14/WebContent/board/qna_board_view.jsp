@@ -3,8 +3,6 @@
 <%@ page import = "net.board.db.*" %>
 <%
 	BoardBean board = (BoardBean)request.getAttribute("boarddata");
-
-	String filename = board.getBOARD_FILE();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -28,6 +26,10 @@
 		
 	<tr bgcolor="cccccc">
 		<td colspan="2" style="height:1px;">
+		</td>
+	</tr>
+	<tr>
+		<td style="font-family:µ¸À½; font-size:12">
 			<div align="center">³»¿ë</div>
 		</td>
 		<td style="font-family:µ¸À½; font-size:12">
@@ -46,8 +48,8 @@
 		</td>
 		<td style="font-family:µ¸À½; font-size:12">
 		<%if(!(board.getBOARD_FILE()==null)){ %>
-		<a href="file_down.jsp?filename=<%=filename %>">
-			<%=filename %>
+		<a href="/board/file_down.jsp?file_name=<%=board.getBOARD_FILE() %>">
+			<%=board.getBOARD_FILE() %>
 		</a>
 		<%} %>
 		</td>
