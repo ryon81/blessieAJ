@@ -21,7 +21,7 @@ public class BoardBean
 	}
 
 	public void setBOARD_NUM(int bOARD_NUM) {
-		BOARD_NUM = bOARD_NUM;
+		BOARD_NUM =bOARD_NUM;
 	}
 	public String getBOARD_NAME() {
 		return BOARD_NAME;
@@ -63,31 +63,31 @@ public class BoardBean
 		return BOARD_RE_REF;
 	}
 	public void setBOARD_RE_REF(int bOARD_RE_REF) {
-		BOARD_RE_REF = bOARD_RE_REF;
+		BOARD_RE_REF =bOARD_RE_REF;
 	}
 	public int getBOARD_RE_LEV() {
 		return BOARD_RE_LEV;
 	}
 	public void setBOARD_RE_LEV(int bOARD_RE_LEV) {
-		BOARD_RE_LEV = bOARD_RE_LEV;
+		BOARD_RE_LEV =bOARD_RE_LEV;
 	}
 	public int getBOARD_RE_SEQ() {
 		return BOARD_RE_SEQ;
 	}
 	public void setBOARD_RE_SEQ(int bOARD_RE_SEQ) {
-		BOARD_RE_SEQ = bOARD_RE_SEQ;
+		BOARD_RE_SEQ =bOARD_RE_SEQ;
 	}
 	public int getBOARD_READCOUNT() {
 		return BOARD_READCOUNT;
 	}
 	public void setBOARD_READCOUNT(int bOARD_READCOUNT) {
-		BOARD_READCOUNT = bOARD_READCOUNT;
+		BOARD_READCOUNT =bOARD_READCOUNT;
 	}
 	public Date getBOARD_DATE() {
 		return BOARD_DATE;
 	}
 	public void setBOARD_DATE(Date bOARD_DATE) {
-		BOARD_DATE = bOARD_DATE;
+		BOARD_DATE =bOARD_DATE;
 	}
 
 }

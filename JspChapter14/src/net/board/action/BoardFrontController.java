@@ -27,7 +27,7 @@ public class BoardFrontController extends javax.servlet.http.HttpServlet impleme
 			action = new BoardReplyAction();
 			try
 			{
-				forward = action.execute(request, response);
+				forward = action.execute(request, response);				
 			} catch (Exception e)
 			{
 				e.printStackTrace();

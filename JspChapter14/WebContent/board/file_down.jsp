@@ -1,11 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ page import = "net.board.db.*" %>
 <%@ page import="java.io.File" %>
 <%@ page import="java.io.*" %>
 <%
-	String fileName = request.getParameter("file_name");
+	BoardBean board = (BoardBean)request.getAttribute("boarddata");
+		
+	String fileName = request.getParameter("filename"); 	
 	
-	String savePath = "upload";
+	String savePath = "boardupload";
 	ServletContext context = getServletContext();
 	String sDownloadPath = context.getRealPath(savePath);
 	String sFilePath = sDownloadPath + "\\" + fileName;
@@ -16,10 +19,10 @@
 	FileInputStream in = new FileInputStream(sFilePath);
 	
 	String sMimeType = getServletContext().getMimeType(sFilePath);
-	System.out.println("sMimetype>>>" + sMimeType);
+	System.out.println("sMimeType >>>" + sMimeType);
 	
-	if(sMimeType == null) sMimeType = "application/octet-steam";
-	response.setContentType(sMimeType);
+	if(sMimeType==null)sMimeType = "application/octet-stream";
+response.setContentType(sMimeType);
 	
 	String sEncoding = new String(fileName.getBytes("euc-kr"),"8859_1");
 	response.setHeader("Content-Disposition", "attachment; filename=" + sEncoding);
@@ -34,8 +37,7 @@
 	out2.flush();
 	out2.close();
 	in.close();
-	
-	%>
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>

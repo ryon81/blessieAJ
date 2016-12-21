@@ -14,9 +14,9 @@ public class BoardReplyAction implements Action
 
 		BoardDAO boarddao = new BoardDAO();
 		BoardBean boarddata = new BoardBean();
-		int result = 0;
-		
-		boarddata.setBOARD_NUM(Integer.parseInt(request.getParameter("BOARD_NUM")));
+		int result =0;
+				
+		boarddata.setBOARD_NUM(Integer.parseInt(request.getParameter("BOARD_NUM")));		
 		boarddata.setBOARD_NAME(request.getParameter("BOARD_NAME"));
 		boarddata.setBOARD_PASS(request.getParameter("BOARD_PASS"));
 		boarddata.setBOARD_SUBJECT(request.getParameter("BOARD_SUBJECT"));
@@ -24,8 +24,8 @@ public class BoardReplyAction implements Action
 		boarddata.setBOARD_RE_REF(Integer.parseInt(request.getParameter("BOARD_RE_REF")));
 		boarddata.setBOARD_RE_SEQ(Integer.parseInt(request.getParameter("BOARD_RE_SEQ")));
 		result = boarddao.boardReply(boarddata);
-		
-		if(result == 0)
+				
+		if(result==0)
 		{
 			System.out.println("답장 실패");
 			return null;

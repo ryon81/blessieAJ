@@ -14,11 +14,12 @@ public class BoardReplyView implements Action
 		BoardDAO boarddao = new BoardDAO();
 		BoardBean boarddata = new BoardBean();
 		
-		int num = Integer.parseInt(request.getParameter("num"));
+		int num = Integer.parseInt(request.getParameter("num"));		
 		
 		boarddata = boarddao.getDetail(num);
 		
-		if (boarddata == null)
+		
+		if (boarddata==null)
 		{
 			System.out.println("답장 페이지 이동 실패");
 			return null;

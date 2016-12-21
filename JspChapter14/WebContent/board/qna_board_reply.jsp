@@ -9,7 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>MVC 게시판</title>
-<script type="javascript">
+<script language="javascript">
 function replyboard()
 {
 	boardform.submit();	

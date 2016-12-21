@@ -3,6 +3,8 @@
 <%@ page import = "net.board.db.*" %>
 <%
 	BoardBean board = (BoardBean)request.getAttribute("boarddata");
+
+	String filename = board.getBOARD_FILE();
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -44,8 +46,8 @@
 		</td>
 		<td style="font-family:돋음; font-size:12">
 		<%if(!(board.getBOARD_FILE()==null)){ %>
-		<a href="./boardupload/<%=board.getBOARD_FILE() %>">
-			<%=board.getBOARD_FILE() %>
+		<a href="file_down.jsp?filename=<%=filename %>">
+			<%=filename %>
 		</a>
 		<%} %>
 		</td>
@@ -60,8 +62,8 @@
 	<tr align="center" valign="middle">
 		<td colspan="5">
 			<font size=2>
-			<a href="./BoardReplyAction.bo?num=<%=board.getBOARD_NUM() %>">
-			[답변]
+			<a href="./BoardReplyView.bo?num=<%=board.getBOARD_NUM() %>">
+			[답변]			
 			</a>&nbsp;&nbsp;
 			<a href="./BoardModify.bo?num=<%=board.getBOARD_NUM() %>">
 			[수정]

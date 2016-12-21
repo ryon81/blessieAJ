@@ -21,7 +21,7 @@ desc board
 create table board01
 as select * from board
 
-select * from board01
+
 
 drop table board
 

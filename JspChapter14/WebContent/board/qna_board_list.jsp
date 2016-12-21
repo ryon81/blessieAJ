@@ -57,7 +57,7 @@
 			
 		%>
 		
-		<tr align="center" valign="middle" bordercolor="#333333" onmouseover="this.style.backgroundColor='F8F8F8'" onmouseout="this.style.backgourndColor=''">
+		<tr align="center" valign="middle" bordercolor="#333333" onmouseover="this.style.backgroundColor='F8F8F8'" onmouseout="this.style.backgroundColor=''">
 			<td height="23" style="font-family:Tahoma; font-size:10pt;">
 				<%=bl.getBOARD_NUM()%>
 			</td>
