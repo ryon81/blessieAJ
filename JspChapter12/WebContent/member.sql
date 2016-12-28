@@ -19,6 +19,10 @@ alter table member add regdate date
 
 insert into member values('aaa','1234','Àü¿µ¹Î','35','male','a@naver.com',sysdate)
 
+
+
+
+
 create table member
 (
 	id number(30) primary key,
@@ -27,12 +31,14 @@ create table member
 	name VARCHAR2(100),
 	regdate date	
 )
-
 create sequence id_num;
 
 insert into member values (id_num.nextval, 'madvirus@madvirus.net', '1234', 'cbk', sysdate);
 
 select sequence_name from user_sequences;
+
+
+
 
 MainForMemberDao.java
 
